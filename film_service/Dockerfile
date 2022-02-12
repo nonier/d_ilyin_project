@@ -1,4 +1,4 @@
-FROM postgres
+FROM postgres:14.2-alpine
 ENV POSTGRES_USERNAME=postgres
 ENV POSTGRES_PASSWORD=postgres
 ENV POSTGRES_DB=film-service

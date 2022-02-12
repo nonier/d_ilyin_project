@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: 202202122020
+      author: d.ilyin
+
+      changes:
+        - createTable:
+            tableName: genre
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(128)
+                  constraints:
+                    nullable: false
+
+        - createTable:
+            tableName: film_genre
+            columns:
+              - column:
+                  name: film_id
+                  type: bigint
+              - column:
+                  name: genre_id
+                  type: bigint
+
+        - addForeignKeyConstraint:
+            constraintName: film_genre_film_reference_key
+            baseTableName: film_genre
+            baseColumnNames: film_id
+            referencedTableName: film
+            referencedColumnNames: id
+
+        - addForeignKeyConstraint:
+            constraintName: film_genre_genre_reference_key
+            baseTableName: film_genre
+            baseColumnNames: genre_id
+            referencedTableName: genre
+            referencedColumnNames: id
