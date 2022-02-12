@@ -22,17 +22,14 @@ databaseChangeLog:
                   name: description
                   type: varchar(512)
               - column:
-                  name: genre
-                  type: varchar(64)
-              - column:
                   name: release_date
-                  type: timestamp
+                  type: date
               - column:
                   name: country
                   type: varchar(128)
               - column:
                   name: duration
-                  type: smallint
+                  type: int
               - column:
-                  name: age
+                  name: age_limit
                   type: smallint
