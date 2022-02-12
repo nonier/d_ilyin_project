@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: 202202122111
+      author: d.ilyin
+      changes:
+        - createTable:
+            tableName: film_actor
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: film_id
+                  type: bigint
+              - column:
+                  name: actor_id
+                  type: bigint
+              - column:
+                  name: role
+                  type: varchar(128)
+
+        - addForeignKeyConstraint:
+            constraintName: film_actor_film_foreign_key
+            baseTableName: film_actor
+            baseColumnNames: film_id
+            referencedTableName: film
+            referencedColumnNames: id
+        - addForeignKeyConstraint:
+            constraintName: film_actor_actor_foreign_key
+            baseTableName: film_actor
+            baseColumnNames: actor_id
+            referencedTableName: actor
+            referencedColumnNames: id

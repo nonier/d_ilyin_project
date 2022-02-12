@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: 202202122108
+      author: d.ilyin
+      changes:
+        - createTable:
+            tableName: actor
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: varchar(128)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: second_name
+                  type: varchar(128)
+              - column:
+                  name: age
+                  type: int
+
+

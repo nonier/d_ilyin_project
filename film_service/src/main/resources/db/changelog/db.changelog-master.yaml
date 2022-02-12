@@ -3,3 +3,7 @@ databaseChangeLog:
       file: db/changelog/v1.0.0/init-db.yaml
   - include:
       file: db/changelog/v1.0.1/create-genre-table.yml
+  - include:
+      file: db/changelog/v1.0.1/create-actor-table.yml
+  - include:
+      file: db/changelog/v1.0.1/create-film-actor-table.yml

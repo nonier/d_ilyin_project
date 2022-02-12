@@ -3,16 +3,14 @@ package com.example.film_service.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Fetch;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 
-@Entity
 @Data
+@Entity
+@Table(name = "film")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Film {
@@ -44,4 +42,7 @@ public class Film {
             joinColumns = @JoinColumn(name = "film_id"),
             inverseJoinColumns = @JoinColumn(name = "genre_id"))
     private List<Genre> genres;
+
+    @OneToMany(mappedBy = "film", fetch = FetchType.LAZY)
+    private List<ActorRole> actorRoles;
 }

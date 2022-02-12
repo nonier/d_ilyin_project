@@ -5,23 +5,27 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Data
 @Entity
-@Table(name = "genre")
+@Table(name = "film_actor")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Genre {
+public class ActorRole {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Enumerated(value = EnumType.STRING)
-    @Column(name = "name")
-    private GenreType genre;
+    @Column(name = "role")
+    private String role;
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "genres")
-    private List<Film> films;
+    @ManyToOne
+    @JoinColumn(name = "actor_id")
+    private Actor actor;
+
+    @ManyToOne
+    @JoinColumn(name = "film_id")
+    private Film film;
+
 }
