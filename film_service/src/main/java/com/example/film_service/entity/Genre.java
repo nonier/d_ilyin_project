@@ -20,7 +20,7 @@ public class Genre {
 
     @Enumerated(value = EnumType.STRING)
     @Column(name = "name")
-    private GenreType genre;
+    private GenreType name;
 
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "genres")
     private List<Film> films;
