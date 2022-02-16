@@ -3,6 +3,7 @@ package com.example.film_service.service;
 import com.example.film_service.dto.ActorDto;
 import com.example.film_service.entity.Actor;
 import com.example.film_service.repository.ActorRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,6 +15,7 @@ public class ActorServiceImpl implements ActorService {
     private final ActorRepository actorRepository;
     private final EntityMapper entityMapper;
 
+    @Autowired
     public ActorServiceImpl(ActorRepository actorRepository, EntityMapper entityMapper) {
         this.actorRepository = actorRepository;
         this.entityMapper = entityMapper;
