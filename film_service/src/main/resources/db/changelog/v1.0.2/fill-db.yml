@@ -1,0 +1,224 @@
+databaseChangeLog:
+  - changeSet:
+      id: 202202131737
+      author: d.ilyin
+      changes:
+        - insert:
+            tableName: genre
+            columns:
+              - column:
+                  name: name
+                  value: COMEDY
+        - insert:
+            tableName: genre
+            columns:
+              - column:
+                  name: name
+                  value: ACTION
+        - insert:
+            tableName: genre
+            columns:
+              - column:
+                  name: name
+                  value: HISTORICAL
+        - insert:
+            tableName: genre
+            columns:
+              - column:
+                  name: name
+                  value: FANTASY
+        - insert:
+            tableName: genre
+            columns:
+              - column:
+                  name: name
+                  value: FAMILY
+        - insert:
+            tableName: genre
+            columns:
+              - column:
+                  name: name
+                  value: FANTASTIC
+
+        - insert:
+            tableName: genre
+            columns:
+              - column:
+                  name: name
+                  value: DRAMA
+
+        - insert:
+            tableName: film
+            columns:
+              - column:
+                  name: name
+                  value: Terminator
+              - column:
+                  name: description
+                  value: The Terminator is a 1984 American science fiction action film directed by James Cameron. It stars Arnold Schwarzenegger as the Terminator, a cyborg assassin sent back in time from 2029 to 1984 to kill Sarah Connor (Linda Hamilton), whose unborn son will one day save mankind from extinction by a hostile artificial intelligence in a post-apocalyptic future.
+              - column:
+                  name: release_date
+                  value: 1984-10-26
+              - column:
+                  name: country
+                  value: Unated States
+              - column:
+                  name: duration
+                  value: 107
+              - column:
+                  name: age_limit
+                  value: 14
+        - insert:
+            tableName: film
+            columns:
+              - column:
+                  name: name
+                  value: Home Alone
+              - column:
+                  name: description
+                  value:  Culkin plays Kevin McCallister, a boy who defends his Chicago home from burglars after his family accidentally leaves him behind on their Christmas vacation to Paris.
+              - column:
+                  name: release_date
+                  value: 1990-11-10
+              - column:
+                  name: country
+                  value: Unated States
+              - column:
+                  name: duration
+                  value: 107
+              - column:
+                  name: age_limit
+                  value: 6
+
+        - insert:
+            tableName: film_genre
+            columns:
+              - column:
+                  name: film_id
+                  value: 1
+              - column:
+                  name: genre_name
+                  value: ACTION
+        - insert:
+            tableName: film_genre
+            columns:
+              - column:
+                  name: film_id
+                  value: 2
+              - column:
+                  name: genre_name
+                  value: COMEDY
+        - insert:
+            tableName: film_genre
+            columns:
+              - column:
+                  name: film_id
+                  value: 1
+              - column:
+                  name: genre_name
+                  value: FANTASTIC
+        - insert:
+            tableName: film_genre
+            columns:
+              - column:
+                  name: film_id
+                  value: 2
+              - column:
+                  name: genre_name
+                  value: FAMILY
+        - insert:
+            tableName: actor
+            columns:
+              - column:
+                  name: first_name
+                  value: Macaulay
+              - column:
+                  name: second_name
+                  value: Culkin
+              - column:
+                  name: age
+                  value: 41
+        - insert:
+            tableName: actor
+            columns:
+              - column:
+                  name: first_name
+                  value: Joe
+              - column:
+                  name: second_name
+                  value: Pesci
+              - column:
+                  name: age
+                  value: 79
+        - insert:
+            tableName: actor
+            columns:
+              - column:
+                  name: first_name
+                  value: Arnold
+              - column:
+                  name: second_name
+                  value: Schwarzenegger
+              - column:
+                  name: age
+                  value: 74
+        - insert:
+            tableName: actor
+            columns:
+              - column:
+                  name: first_name
+                  value: Linda
+              - column:
+                  name: second_name
+                  value: Hamilton
+              - column:
+                  name: age
+                  value: 65
+        - insert:
+            tableName: actor_role
+            columns:
+              - column:
+                  name: actor_id
+                  value: 1
+              - column:
+                  name: film_id
+                  value: 2
+              - column:
+                  name: role
+                  value: Kevin
+        - insert:
+            tableName: actor_role
+            columns:
+              - column:
+                  name: actor_id
+                  value: 2
+              - column:
+                  name: film_id
+                  value: 2
+              - column:
+                  name: role
+                  value: Garry
+        - insert:
+            tableName: actor_role
+            columns:
+              - column:
+                  name: actor_id
+                  value: 3
+              - column:
+                  name: film_id
+                  value: 1
+              - column:
+                  name: role
+                  value: T-800
+        - insert:
+            tableName: actor_role
+            columns:
+              - column:
+                  name: actor_id
+                  value: 4
+              - column:
+                  name: film_id
+                  value: 1
+              - column:
+                  name: role
+                  value: Sara Khonor

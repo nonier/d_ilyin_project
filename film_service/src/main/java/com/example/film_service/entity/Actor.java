@@ -28,6 +28,6 @@ public class Actor {
     @Column(name = "age")
     private int age;
 
-    @OneToMany(mappedBy = "actor", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "actor", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<ActorRole> actorRoles;
 }

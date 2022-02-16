@@ -6,5 +6,7 @@ public enum GenreType {
     DRAMA,
     FANTASY,
     ACTION,
-    HISTORICAL
+    HISTORICAL,
+    FANTASTIC,
+    FAMILY
 }

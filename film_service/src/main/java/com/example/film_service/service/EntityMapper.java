@@ -18,16 +18,14 @@ public interface EntityMapper {
     @Mappings({
             @Mapping(target = "firstName", source = "actor.firstName"),
             @Mapping(target = "secondName", source = "actor.secondName"),
-            @Mapping(target = "age", source = "actor.age"),
-            @Mapping(target = "actorRoles", source = "actor.actorRoles")
+            @Mapping(target = "age", source = "actor.age")
     })
     ActorDto actorToActorDto(Actor actor);
 
     @Mappings({
             @Mapping(target = "firstName", source = "actorDto.firstName"),
             @Mapping(target = "secondName", source = "actorDto.secondName"),
-            @Mapping(target = "age", source = "actorDto.age"),
-            @Mapping(target = "actorRoles", source = "actorDto.actorRoles")
+            @Mapping(target = "age", source = "actorDto.age")
     })
     Actor actorDtoToActor(ActorDto actorDto);
 
@@ -53,15 +51,13 @@ public interface EntityMapper {
 
     @Mappings({
             @Mapping(target = "role", source = "actorRole.role"),
-            @Mapping(target = "actor", source = "actorRole.actor"),
-            @Mapping(target = "film", source = "actorRole.film")
+            @Mapping(target = "actor", source = "actorRole.actor")
     })
     ActorRoleDto actorRoleToActorRoleDto(ActorRole actorRole);
 
     @Mappings({
             @Mapping(target = "role", source = "actorRoleDto.role"),
-            @Mapping(target = "actor", source = "actorRoleDto.actor"),
-            @Mapping(target = "film", source = "actorRoleDto.film")
+            @Mapping(target = "actor", source = "actorRoleDto.actor")
     })
     ActorRole actorRoleDtoToActorRole(ActorRoleDto actorRoleDto);
 

@@ -4,7 +4,7 @@ databaseChangeLog:
       author: d.ilyin
       changes:
         - createTable:
-            tableName: film_actor
+            tableName: actor_role
             columns:
               - column:
                   name: id
@@ -24,14 +24,14 @@ databaseChangeLog:
                   type: varchar(128)
 
         - addForeignKeyConstraint:
-            constraintName: film_actor_film_foreign_key
-            baseTableName: film_actor
+            constraintName: actor_role_film_foreign_key
+            baseTableName: actor_role
             baseColumnNames: film_id
             referencedTableName: film
             referencedColumnNames: id
         - addForeignKeyConstraint:
-            constraintName: film_actor_actor_foreign_key
-            baseTableName: film_actor
+            constraintName: actor_role_actor_foreign_key
+            baseTableName: actor_role
             baseColumnNames: actor_id
             referencedTableName: actor
             referencedColumnNames: id

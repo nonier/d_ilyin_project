@@ -12,6 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 public class FilmDto {
 
+    private Long id;
     private String name;
     private String description;
     private LocalDate releaseDate;

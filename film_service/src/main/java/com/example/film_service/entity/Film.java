@@ -40,9 +40,9 @@ public class Film {
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "film_genre",
             joinColumns = @JoinColumn(name = "film_id"),
-            inverseJoinColumns = @JoinColumn(name = "genre_id"))
+            inverseJoinColumns = @JoinColumn(name = "genre_name"))
     private List<Genre> genres;
 
-    @OneToMany(mappedBy = "film", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "film", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<ActorRole> actorRoles;
 }

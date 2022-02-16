@@ -8,16 +8,10 @@ databaseChangeLog:
             tableName: genre
             columns:
               - column:
-                  name: id
-                  type: bigint
-                  autoIncrement: true
-                  constraints:
-                    primaryKey: true
-                    nullable: false
-              - column:
                   name: name
                   type: varchar(128)
                   constraints:
+                    primaryKey: true
                     nullable: false
 
         - createTable:
@@ -27,8 +21,8 @@ databaseChangeLog:
                   name: film_id
                   type: bigint
               - column:
-                  name: genre_id
-                  type: bigint
+                  name: genre_name
+                  type: varchar(128)
 
         - addForeignKeyConstraint:
             constraintName: film_genre_film_reference_key
@@ -40,6 +34,6 @@ databaseChangeLog:
         - addForeignKeyConstraint:
             constraintName: film_genre_genre_reference_key
             baseTableName: film_genre
-            baseColumnNames: genre_id
+            baseColumnNames: genre_name
             referencedTableName: genre
-            referencedColumnNames: id
+            referencedColumnNames: name

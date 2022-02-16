@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ActorRoleDto {
 
-    private FilmDto film;
     private ActorDto actor;
     private String role;
 }

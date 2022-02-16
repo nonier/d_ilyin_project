@@ -8,7 +8,7 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "film_actor")
+@Table(name = "actor_role")
 @AllArgsConstructor
 @NoArgsConstructor
 public class ActorRole {
